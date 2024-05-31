@@ -1,4 +1,8 @@
 body {
+  background-image: url(../img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
