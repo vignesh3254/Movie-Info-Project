@@ -47,18 +47,23 @@ The movie library page allows users to search for movies by title using the OMDB
 2. jQuery 3.7.1: For making AJAX requests and handling DOM manipulations
 ## How to Run the Project
 
-Clone the repository:
+1. Clone the repository:
 
 ```bash
   git clone https://github.com/your-username/movie-library-project.git
+```
 
+2. Open the project directory:
+
+```bash
   cd movie-library-project
 ```
-1. Open index.html in your browser to access the authentication page.
 
-2. Sign up or sign in to be redirected to the movie library page.
+3. Open index.html in your browser to access the authentication page.
 
-3. On the movie library page, enter the name of a movie and click "Search Movie" to view the details.
+4. Sign up or sign in to be redirected to the movie library page.
+
+5. On the movie library page, enter the name of a movie and click "Search Movie" to view the details.
     
 ## Acknowledgements
 
