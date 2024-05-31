@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-button .btn {
+            margin-left: 10px;
+        }
+
+        .white-btn {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .white-btn:hover {
+            background-color: #ddd;
+        }
+        .form-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container form input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .container form button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+        }
+
+        .container form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Movie Info</div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+    <div class="form-box">
+        <div class="container">
+            <div class="login-container" id="login">
+                <h2>Sign In</h2>
+                <form id="signin-form" action="auth.php" method="POST" onsubmit="handleSignIn(event)">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="register-container" id="register">
+                <h2>Sign Up</h2>
+                <form id="signup-form" action="auth.php" method="POST" onsubmit="handleSignUp(event)">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function login() {
+            document.getElementById("login").style.display = "block";
+            document.getElementById("register").style.display = "none";
+            document.getElementById("loginBtn").classList.add("white-btn");
+            document.getElementById("registerBtn").classList.remove("white-btn");
+        }
+
+        function register() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("register").style.display = "block";
+            document.getElementById("loginBtn").classList.remove("white-btn");
+            document.getElementById("registerBtn").classList.add("white-btn");
+        }
+
+        function handleSignIn(event) {
+            event.preventDefault();
+            window.location.href = "mo-library\index.html"; 
+        }
+
+        function handleSignUp(event) {
+            event.preventDefault();
+            window.location.href = "mo-library\index.html";
+        }
+
+        login();
+    </script>
+</body>
+
+</html>
